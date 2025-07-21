@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 interface GithubItem {
   name: string;
@@ -14,6 +14,7 @@ const GITHUB_REPO = 'https://github.com/Rohitpawar4545/summer_internship';
 
 const Projects = () => {
   const [projects, setProjects] = useState<GithubItem[]>([]);
+  const [hovered, setHovered] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -27,51 +28,53 @@ const Projects = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent animate-slideInLeft">
+      <div className="text-center mb-16">
+        <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent animate-slideInLeft">
           What I Build
         </h2>
-        <p className="text-lg text-gray-300 animate-slideInRight">
+        <p className="text-xl text-gray-300 animate-slideInRight">
           Projects from my GitHub internship repository
         </p>
       </div>
       {loading ? (
         <div className="text-center text-gray-400">Loading projects...</div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {projects.filter(item => item.type === 'file' || item.type === 'dir').map((item) => (
-            <div key={item.path} className="rounded-xl bg-gray-900 glass-effect p-4 flex flex-col justify-between shadow-lg border border-gray-800 hover:scale-105 transition-transform">
-              <div>
-                <h3 className="text-lg font-semibold text-white truncate mb-2">{item.name}</h3>
-                <p className="text-xs text-gray-400 mb-4 truncate">{item.type === 'dir' ? 'Project Folder' : 'File'}</p>
-              </div>
-              <div className="flex space-x-2 mt-auto">
-                <a
-                  href={`https://github.com/Rohitpawar4545/summer_internship/tree/main/${item.path}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-1 px-3 py-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded text-white text-xs font-medium hover:from-cyan-600 hover:to-purple-600 transition-colors"
-                >
-                  <Github className="w-4 h-4" />
-                  <span>GitHub</span>
-                </a>
-                {item.download_url && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.filter(item => item.type === 'file' || item.type === 'dir').map((item, index) => (
+            <div
+              key={item.path}
+              className="perspective-1000"
+              onMouseEnter={() => setHovered(item.path)}
+              onMouseLeave={() => setHovered(null)}
+            >
+              <div
+                className={`skill-cube w-full h-48 rounded-2xl bg-gradient-to-r from-cyan-400 to-purple-500 p-1 animate-slideInUp`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="w-full h-full rounded-2xl bg-gray-900 flex flex-col items-center justify-center space-y-4 glass-effect relative overflow-hidden">
+                  <h3 className="text-xl font-bold text-white text-center truncate px-2">{item.name}</h3>
+                  <p className="text-sm text-gray-400 text-center px-2 truncate">{item.type === 'dir' ? 'Project Folder' : 'File'}</p>
                   <a
-                    href={item.download_url}
+                    href={`https://github.com/Rohitpawar4545/summer_internship/tree/main/${item.path}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-1 px-3 py-1 bg-gray-800 rounded text-cyan-300 text-xs font-medium hover:bg-gray-700 transition-colors"
+                    className="flex flex-col items-center mt-2"
                   >
-                    <ExternalLink className="w-4 h-4" />
-                    <span>Raw</span>
+                    <Github className="w-8 h-8 text-cyan-400 group-hover:scale-110 transition-transform" />
+                    <span className="text-xs text-cyan-300 mt-1">GitHub</span>
                   </a>
-                )}
+                  {hovered === item.path && (
+                    <div className="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center space-y-3 rounded-2xl transition-all duration-300">
+                      <p className="text-sm text-gray-300 text-center px-4">Open on GitHub to view details and code.</p>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           ))}
         </div>
       )}
-      <div className="mt-10 text-center">
+      <div className="mt-16 text-center">
         <a
           href={GITHUB_REPO}
           target="_blank"
