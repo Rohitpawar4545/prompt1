@@ -88,79 +88,24 @@ const Contact = () => {
         </div>
         
         <div className="animate-slideInRight">
-          <form onSubmit={handleSubmit} className="glass-effect rounded-2xl p-8">
+          <form action="mailto:rohitpawar92006@gmail.com" method="POST" encType="text/plain" className="glass-effect rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-6">Send Message</h3>
             
             <div className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white placeholder-gray-400"
-                  placeholder="Your name"
-                />
+                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                <input type="text" id="name" name="name" required className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white placeholder-gray-400" placeholder="Your name" />
               </div>
-              
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white placeholder-gray-400"
-                  placeholder="your.email@example.com"
-                />
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                <input type="email" id="email" name="email" required className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white placeholder-gray-400" placeholder="your.email@example.com" />
               </div>
-              
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white placeholder-gray-400 resize-none"
-                  placeholder="Tell me about your project or just say hello..."
-                />
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                <textarea id="message" name="message" required rows={6} className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white placeholder-gray-400 resize-none" placeholder="Tell me about your project or just say hello..." />
               </div>
-              
-              <button
-                type="submit"
-                disabled={isSubmitting || isSubmitted}
-                className="w-full py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 hover-scale"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                    <span>Sending...</span>
-                  </>
-                ) : isSubmitted ? (
-                  <>
-                    <Check className="w-5 h-5" />
-                    <span>Message Sent!</span>
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-5 h-5" />
-                    <span>Send Message</span>
-                  </>
-                )}
+              <button type="submit" className="w-full py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center space-x-2 hover-scale">
+                <span>Send Message</span>
               </button>
             </div>
           </form>
