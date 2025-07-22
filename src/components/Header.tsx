@@ -55,25 +55,23 @@ const Header = () => {
       </div>
       
       {/* Photo Section */}
-      <div className="block mx-auto my-8 lg:my-0 lg:ml-12 w-40 h-40 sm:w-56 sm:h-56 lg:w-80 lg:h-80 animate-slideInRight">
-        <div className="relative group perspective-1000">
-          <div className="w-full h-full rounded-2xl bg-gradient-to-r from-cyan-400 via-purple-500 to-yellow-400 p-1 hover-scale">
-            <div className="w-full h-full rounded-2xl bg-gray-900 glass-effect flex items-center justify-center relative overflow-hidden">
+      <div className="flex justify-center items-center mx-auto my-8 lg:my-0 lg:ml-12 animate-slideInRight">
+        <div className="relative group perspective-1000 w-32 h-32 sm:w-44 sm:h-44 lg:w-80 lg:h-80">
+          <div className="w-full h-full rounded-full bg-gradient-to-r from-cyan-400 via-purple-500 to-yellow-400 p-1 hover-scale">
+            <div className="w-full h-full rounded-full bg-gray-900 glass-effect flex items-center justify-center relative overflow-hidden">
               {/* Rohit's Photo */}
               <img 
                 src={rohitImg} 
                 alt="Rohit Pawar" 
-                className="w-full h-full object-cover rounded-2xl transform transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover rounded-full border-4 border-transparent"
               />
-              
               {/* Hover overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end justify-center pb-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full flex items-end justify-center pb-6">
                 <div className="text-center">
                   <span className="text-white font-bold text-xl block">Rohit Pawar</span>
                   <span className="text-cyan-300 text-sm">DevOps Engineer</span>
                 </div>
               </div>
-              
               {/* Professional badge */}
               <div className="absolute top-4 right-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full px-3 py-1 text-xs font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 Available
