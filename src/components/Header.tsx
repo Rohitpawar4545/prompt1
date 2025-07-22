@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Download } from 'lucide-react';
+import { Mail, Download, Linkedin, Github, Instagram } from 'lucide-react';
 import rohitImg from "../assets/rohit.jpg";
 
 const Header = () => {
@@ -65,6 +65,40 @@ const Header = () => {
                 alt="Rohit Pawar" 
                 className="w-full h-full object-cover rounded-full border-4 border-transparent"
               />
+              {/* Floating Social Bubbles */}
+              <a
+                href="https://www.linkedin.com/in/rohit-pawar-118124317"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute left-1/2 bottom-2 -translate-x-1/2 z-20 bubble-float bubble-delay-0"
+                title="LinkedIn"
+              >
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 shadow-lg transition-transform duration-300 hover:scale-110 hover:ring-2 hover:ring-blue-400">
+                  <Linkedin className="w-6 h-6 text-white" />
+                </div>
+              </a>
+              <a
+                href="https://github.com/Rohitpawar4545"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute left-1/3 bottom-4 -translate-x-1/2 z-20 bubble-float bubble-delay-1"
+                title="GitHub"
+              >
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg transition-transform duration-300 hover:scale-110 hover:ring-2 hover:ring-gray-400">
+                  <Github className="w-6 h-6 text-white" />
+                </div>
+              </a>
+              <a
+                href="https://www.instagram.com/rohit_pawar_45rp?igsh=MTJnZWtxZW96eWZhcA=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute left-2/3 bottom-4 -translate-x-1/2 z-20 bubble-float bubble-delay-2"
+                title="Instagram"
+              >
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-purple-500 shadow-lg transition-transform duration-300 hover:scale-110 hover:ring-2 hover:ring-pink-400">
+                  <Instagram className="w-6 h-6 text-white" />
+                </div>
+              </a>
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full flex items-end justify-center pb-6">
                 <div className="text-center">
