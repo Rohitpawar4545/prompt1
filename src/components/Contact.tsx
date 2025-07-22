@@ -83,6 +83,28 @@ const Contact = () => {
                   <p className="text-white font-medium">Within 24 hours</p>
                 </div>
               </div>
+
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center group relative">
+                  {/* WhatsApp SVG Icon */}
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-6 h-6 text-white" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.031-.967-.273-.099-.471-.148-.67.15-.198.297-.767.967-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.007-.372-.009-.571-.009-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.099 3.205 5.077 4.372.71.306 1.263.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347z" fill="currentColor"/>
+                    <path d="M12.004 2.003c-5.523 0-9.997 4.474-9.997 9.997 0 1.762.463 3.484 1.34 4.997L2 22l5.122-1.34c1.462.797 3.09 1.217 4.882 1.217 5.523 0 9.997-4.474 9.997-9.997 0-5.523-4.474-9.997-9.997-9.997zm0 17.995c-1.627 0-3.22-.433-4.6-1.25l-.328-.194-3.04.796.81-2.963-.213-.304c-.84-1.2-1.285-2.6-1.285-4.08 0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z" fill="currentColor"/>
+                  </svg>
+                  <span className="absolute left-1/2 -top-8 -translate-x-1/2 px-2 py-1 rounded bg-gray-900 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">Chat on WhatsApp</span>
+                </div>
+                <div>
+                  <a
+                    href="https://wa.me/917387598610?text=Hello%20Rohit!%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 text-sm hover:underline focus:underline"
+                  >
+                    WhatsApp
+                  </a>
+                  <p className="text-white font-medium">+91 7387598610</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
