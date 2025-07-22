@@ -55,9 +55,9 @@ const Header = () => {
       </div>
       
       {/* Photo Section */}
-      <div className="hidden lg:block ml-12 animate-slideInRight">
+      <div className="block mx-auto my-8 lg:my-0 lg:ml-12 w-40 h-40 sm:w-56 sm:h-56 lg:w-80 lg:h-80 animate-slideInRight">
         <div className="relative group perspective-1000">
-          <div className="w-80 h-80 rounded-2xl bg-gradient-to-r from-cyan-400 via-purple-500 to-yellow-400 p-1 hover-scale">
+          <div className="w-full h-full rounded-2xl bg-gradient-to-r from-cyan-400 via-purple-500 to-yellow-400 p-1 hover-scale">
             <div className="w-full h-full rounded-2xl bg-gray-900 glass-effect flex items-center justify-center relative overflow-hidden">
               {/* Rohit's Photo */}
               <img 
