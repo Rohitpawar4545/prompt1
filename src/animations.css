@@ -201,3 +201,154 @@
     opacity: 1;
   }
 }
+
+.project-3d-glow {
+  border-radius: 1rem;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #0ff 0%, #a0f 50%, #ff0 100%) border-box;
+  box-shadow: 0 0 24px 4px #0ff6, 0 0 48px 8px #a0f4, 0 0 0 4px #222 inset;
+  transition: box-shadow 0.4s cubic-bezier(0.4,0,0.2,1), transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.project-card-3d {
+  background: rgba(20, 20, 30, 0.98);
+  box-shadow: 0 4px 32px 0 #0ff2, 0 1.5px 8px 0 #a0f2;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 320px;
+  position: relative;
+  transition: box-shadow 0.4s cubic-bezier(0.4,0,0.2,1), transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.project-card-3d:hover, .project-3d-glow:hover {
+  box-shadow: 0 0 48px 8px #0ffb, 0 0 96px 16px #a0fb, 0 0 0 4px #444 inset;
+  transform: translateY(-6px) scale(1.03);
+}
+.project-demo-btn {
+  margin-top: 1.25rem;
+  background: linear-gradient(90deg, #0ff 0%, #a0f 100%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px #0ff4;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+.project-demo-btn:hover {
+  background: linear-gradient(90deg, #a0f 0%, #0ff 100%);
+  box-shadow: 0 4px 16px #a0f4;
+  transform: translateY(-2px) scale(1.04);
+}
+@media (max-width: 640px) {
+  .project-card-3d {
+    padding: 1.25rem 0.75rem 1rem 0.75rem;
+    min-height: 220px;
+  }
+}
+
+.neon-pink { box-shadow: 0 0 0 4px #ff2fa0, 0 0 24px 4px #ff2fa0, 0 0 48px 8px #ff2fa044; border-left: 4px solid #ff2fa0; }
+.neon-pink-glow { box-shadow: 0 0 16px 4px #ff2fa099, 0 0 32px 8px #ff2fa044; background: #ff2fa0; }
+.neon-teal { box-shadow: 0 0 0 4px #00ffd0, 0 0 24px 4px #00ffd044, 0 0 48px 8px #00ffd044; border-left: 4px solid #00ffd0; }
+.neon-teal-glow { box-shadow: 0 0 16px 4px #00ffd099, 0 0 32px 8px #00ffd044; background: #00ffd0; }
+.neon-orange { box-shadow: 0 0 0 4px #ff9900, 0 0 24px 4px #ff990044, 0 0 48px 8px #ff990044; border-left: 4px solid #ff9900; }
+.neon-orange-glow { box-shadow: 0 0 16px 4px #ff990099, 0 0 32px 8px #ff990044; background: #ff9900; }
+.neon-purple { box-shadow: 0 0 0 4px #a259ff, 0 0 24px 4px #a259ff44, 0 0 48px 8px #a259ff44; border-left: 4px solid #a259ff; }
+.neon-purple-glow { box-shadow: 0 0 16px 4px #a259ff99, 0 0 32px 8px #a259ff44; background: #a259ff; }
+.neon-cyan { box-shadow: 0 0 0 4px #00eaff, 0 0 24px 4px #00eaff44, 0 0 48px 8px #00eaff44; border-left: 4px solid #00eaff; }
+.neon-cyan-glow { box-shadow: 0 0 16px 4px #00eaff99, 0 0 32px 8px #00eaff44; background: #00eaff; }
+.neon-blue { box-shadow: 0 0 0 4px #2f80ff, 0 0 24px 4px #2f80ff44, 0 0 48px 8px #2f80ff44; border-left: 4px solid #2f80ff; }
+.neon-blue-glow { box-shadow: 0 0 16px 4px #2f80ff99, 0 0 32px 8px #2f80ff44; background: #2f80ff; }
+.neon-yellow { box-shadow: 0 0 0 4px #ffe600, 0 0 24px 4px #ffe60044, 0 0 48px 8px #ffe60044; border-left: 4px solid #ffe600; }
+.neon-yellow-glow { box-shadow: 0 0 16px 4px #ffe60099, 0 0 32px 8px #ffe60044; background: #ffe600; }
+
+.project-card-ig {
+  background: rgba(20, 20, 30, 0.98);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 32px 0 #0ff2, 0 1.5px 8px 0 #a0f2;
+  padding: 0;
+  min-height: 320px;
+  position: relative;
+  overflow: visible;
+  transition: box-shadow 0.4s cubic-bezier(0.4,0,0.2,1), transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  cursor: pointer;
+}
+.project-card-ig:hover, .project-card-ig:focus {
+  box-shadow: 0 0 48px 8px #fff8, 0 0 96px 16px #0ffb, 0 0 0 4px #444 inset;
+  transform: translateY(-6px) scale(1.03);
+  z-index: 2;
+}
+.drop-shadow-glow {
+  filter: drop-shadow(0 0 8px #0ff) drop-shadow(0 0 16px #fff);
+}
+@media (max-width: 640px) {
+  .project-card-ig {
+    min-height: 220px;
+    border-radius: 1rem;
+  }
+}
+
+/* Project card glow effects */
+.project-card-glow {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.project-card-glow:hover::before {
+  left: 100%;
+}
+
+/* Custom glow colors for project cards */
+.glow-cyan { box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.3); }
+.glow-pink { box-shadow: 0 0 20px rgba(255, 20, 147, 0.5), 0 0 40px rgba(255, 20, 147, 0.3); }
+.glow-orange { box-shadow: 0 0 20px rgba(255, 165, 0, 0.5), 0 0 40px rgba(255, 165, 0, 0.3); }
+.glow-purple { box-shadow: 0 0 20px rgba(147, 0, 211, 0.5), 0 0 40px rgba(147, 0, 211, 0.3); }
+.glow-green { box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.3); }
+.glow-blue { box-shadow: 0 0 20px rgba(0, 123, 255, 0.5), 0 0 40px rgba(0, 123, 255, 0.3); }
+.glow-yellow { box-shadow: 0 0 20px rgba(255, 255, 0, 0.5), 0 0 40px rgba(255, 255, 0, 0.3); }
+.glow-indigo { box-shadow: 0 0 20px rgba(75, 0, 130, 0.5), 0 0 40px rgba(75, 0, 130, 0.3); }
+.glow-red { box-shadow: 0 0 20px rgba(255, 0, 0, 0.5), 0 0 40px rgba(255, 0, 0, 0.3); }
+.glow-teal { box-shadow: 0 0 20px rgba(0, 128, 128, 0.5), 0 0 40px rgba(0, 128, 128, 0.3); }
+.glow-emerald { box-shadow: 0 0 20px rgba(0, 128, 0, 0.5), 0 0 40px rgba(0, 128, 0, 0.3); }
+.glow-violet { box-shadow: 0 0 20px rgba(128, 0, 128, 0.5), 0 0 40px rgba(128, 0, 128, 0.3); }
+.glow-sky { box-shadow: 0 0 20px rgba(135, 206, 235, 0.5), 0 0 40px rgba(135, 206, 235, 0.3); }
+.glow-rose { box-shadow: 0 0 20px rgba(255, 20, 147, 0.5), 0 0 40px rgba(255, 20, 147, 0.3); }
+.glow-lime { box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.3); }
+
+/* Hover effects for project cards */
+.project-card-glow:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Space background animation */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.star-field {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 160px 30px, #ddd, transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: twinkle 4s ease-in-out infinite;
+}
